@@ -1,0 +1,137 @@
+/*
+Theme Name: marketing
+Theme URI: none
+Description: marketingbusiness
+Author: dark
+Author URI: none
+Version: 1.0
+Tags: RWD, 3coluns
+License: MIT
+License URI: mit
+*/
+
+$very_big_desk: 1330px; //大型電腦尺寸
+$big_desk: 1248px; //中型電腦尺寸
+$desk: 1024px; //小型電腦尺寸
+$tablets: 960px; //平板尺寸 (ipad)
+$mobile: 767px; //手機尺寸
+
+$color_white: #ffffff;
+$color_background: #ebebeb;
+$color_light_gray: #919191;
+$color_dark_gray: #383838;
+$color-gray: #787878;
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "微軟正黑體", sans-serif, Arial;
+    // 盒子大小：框線盒子 (規範網頁盒子範圍)
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.header_load {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 7rem;
+    z-index: 9999;
+    background-color: $color_background;
+    overflow-y: hidden;
+
+    .gavn {
+        display: none;
+
+        @media screen and (max-width: $mobile) {
+            display: block;
+        }
+
+        .menu_btn {
+            width: 64px;
+            height: 64px;
+            background: rgba(0, 0, 0, 0);
+            position: fixed;
+            right: 10px;
+            top: 10px;
+            z-index: 51;
+            padding-top: 18px;
+            transition: background 0.3s;
+            cursor: pointer;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0);
+            }
+
+            span {
+                display: block;
+                height: 5px;
+                width: 60%;
+                margin: 0 auto;
+                background: rgb(0, 0, 0);
+                opacity: 1;
+                transition: all 0.3s;
+
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+
+            &.active span:first-child {
+                transform: rotate(45deg) translate(50%, 50%);
+            }
+            &.active span:last-child {
+                transform: rotate(-45deg) translate(40%, 0%);
+            }
+            &.active span:not(:first-child):not(:last-child) {
+                opacity: 0;
+            }
+        }
+        .menu_wrap {
+            position: fixed;
+            width: 100%;
+            right: -100%;
+            top: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.5);
+            z-index: 50;
+            padding: 120px 50px 50px 50px;
+            transition: right 0.3s;
+
+            ul {
+                list-style: none;
+                padding: 0 !important;
+                margin: 0 !important;
+                z-index: 50;
+
+                li {
+                    margin-bottom: 50px;
+                    position: relative;
+                    z-index: 50;
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        margin-right: 10px;
+                    }
+
+                    a {
+                        font-size: 40px;
+                        color: rgb(100, 100, 100);
+                        text-decoration: none;
+                        transition: color 0.3s;
+                        z-index: 52;
+
+                        &:hover {
+                            color: red;
+                        }
+                    }
+                }
+            }
+        }
+        .menu_wrap.active {
+            right: 0 !important;
+        }
+    }
+}

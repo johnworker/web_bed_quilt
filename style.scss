@@ -38,15 +38,11 @@ $color-gray: #787878;
     right: 0;
     height: 7rem;
     z-index: 9999;
-    background-color: $color_background;
+    background-color: rgba(0, 0, 0, 0);;
     overflow-y: hidden;
 
     .gavn {
-        display: none;
-
-        @media screen and (max-width: $mobile) {
-            display: block;
-        }
+        display: block;
 
         .menu_btn {
             width: 64px;
@@ -69,7 +65,7 @@ $color-gray: #787878;
                 height: 5px;
                 width: 60%;
                 margin: 0 auto;
-                background: rgb(0, 0, 0);
+                background: $color_white;
                 opacity: 1;
                 transition: all 0.3s;
 
@@ -94,7 +90,7 @@ $color-gray: #787878;
             right: -100%;
             top: 0;
             bottom: 0;
-            background: rgba(255, 255, 255, 0.5);
+            background: #16222e;
             z-index: 50;
             padding: 120px 50px 50px 50px;
             transition: right 0.3s;
@@ -110,15 +106,10 @@ $color-gray: #787878;
                     position: relative;
                     z-index: 50;
 
-                    img {
-                        width: 30px;
-                        height: 30px;
-                        margin-right: 10px;
-                    }
 
                     a {
                         font-size: 40px;
-                        color: rgb(100, 100, 100);
+                        color: $color_white;
                         text-decoration: none;
                         transition: color 0.3s;
                         z-index: 52;
@@ -134,4 +125,11 @@ $color-gray: #787878;
             right: 0 !important;
         }
     }
+}
+
+
+// 主要內容區
+.main_video {
+    background: #16222e;
+    height: 100vh;  
 }

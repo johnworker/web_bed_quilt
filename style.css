@@ -28,6 +28,13 @@ License URI: mit
   background-color: rgba(0, 0, 0, 0);
   overflow-y: hidden;
 }
+.header_load .logo_box {
+  width: 120px;
+}
+.header_load .logo_box img {
+  width: 120px;
+  margin: 10px;
+}
 .header_load .gavn {
   display: block;
 }
@@ -73,7 +80,7 @@ License URI: mit
   right: -100%;
   top: 0;
   bottom: 0;
-  background: #16222e;
+  background: rgba(22, 34, 46, 0.65);
   z-index: 50;
   padding: 120px 50px 50px 50px;
   transition: right 0.3s;

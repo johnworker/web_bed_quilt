@@ -167,7 +167,7 @@ $color-gray: #787878;
 }
 
 // 圖文說明區
-.text_section {
+.introduce_section {
     display: flex;
     justify-content: space-between;
     padding: 50px;
@@ -175,7 +175,7 @@ $color-gray: #787878;
     margin: 695px 0 0 0;
     background: #16222e;
 
-    .text_content {
+    .introduce_content {
         width: 60%;
         line-height: 1.8;
 

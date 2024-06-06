@@ -141,7 +141,7 @@ License URI: mit
   opacity: 0;
 }
 
-.text_section {
+.introduce_section {
   display: flex;
   justify-content: space-between;
   padding: 50px;
@@ -149,20 +149,20 @@ License URI: mit
   margin: 695px 0 0 0;
   background: #16222e;
 }
-.text_section .text_content {
+.introduce_section .introduce_content {
   width: 60%;
   line-height: 1.8;
 }
-.text_section .text_content p {
+.introduce_section .introduce_content p {
   color: #ffffff;
 }
-.text_section .image_content {
+.introduce_section .image_content {
   width: 35%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.text_section .image_content img {
+.introduce_section .image_content img {
   max-width: 100%;
   margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

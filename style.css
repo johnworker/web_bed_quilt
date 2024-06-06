@@ -118,7 +118,8 @@ License URI: mit
   height: 100%;
   overflow: hidden;
 }
-.main_video #backgroundVideo {
+
+.main_video video {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -128,4 +129,40 @@ License URI: mit
      object-fit: cover;
   transform: translate(-50%, -50%);
   z-index: -1;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.main_video video.active {
+  opacity: 1;
+}
+
+.main_video video.inactive {
+  opacity: 0;
+}
+
+.text_section {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  height: 60vh;
+  margin: 695px 0 0 0;
+  background: #16222e;
+}
+.text_section .text_content {
+  width: 60%;
+  line-height: 1.8;
+}
+.text_section .text_content p {
+  color: #ffffff;
+}
+.text_section .image_content {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text_section .image_content img, .text_section .image_content video {
+  max-width: 100%;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

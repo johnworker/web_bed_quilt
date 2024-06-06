@@ -9,7 +9,8 @@ $(".menu_btn").click(function () {
 $(document).ready(function() {
   var video1 = document.getElementById('backgroundVideo1');
   var video2 = document.getElementById('backgroundVideo2');
-  var videos = [video1, video2];
+  var video3 = document.getElementById('backgroundVideo3');
+  var videos = [video1, video2, video3];
   var currentVideoIndex = 0;
 
   function switchVideo() {

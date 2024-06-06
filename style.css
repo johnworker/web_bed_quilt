@@ -162,7 +162,7 @@ License URI: mit
   flex-direction: column;
   align-items: center;
 }
-.text_section .image_content img, .text_section .image_content video {
+.text_section .image_content img {
   max-width: 100%;
   margin-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */

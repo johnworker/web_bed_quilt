@@ -155,6 +155,7 @@ License URI: mit
 }
 .introduce_section .introduce_content p {
   color: #ffffff;
+  font-size: 20px;
 }
 .introduce_section .image_content {
   width: 35%;
@@ -165,4 +166,25 @@ License URI: mit
 .introduce_section .image_content img {
   max-width: 100%;
   margin-bottom: 20px;
+}
+
+.promise_section {
+  background: #16222e;
+  text-align: center;
+  padding: 100px 20px;
+}
+.promise_section .promise_content {
+  width: auto;
+}
+.promise_section .promise_content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+.promise_section .promise_content p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #ffffff;
 }/*# sourceMappingURL=style.css.map */

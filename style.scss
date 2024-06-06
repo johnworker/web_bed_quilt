@@ -181,18 +181,44 @@ $color-gray: #787878;
 
         p {
             color: $color_white;
+            font-size: 20px;
         }
-      }
+    }
 
-      .image_content {
+    .image_content {
         width: 35%;
         display: flex;
         flex-direction: column;
         align-items: center;
-      
+
         img {
-          max-width: 100%;
-          margin-bottom: 20px;
+            max-width: 100%;
+            margin-bottom: 20px;
         }
-      }
-  }
+    }
+}
+
+// 文字訊息區
+.promise_section {
+    background: #16222e;
+    text-align: center;
+    padding: 100px 20px;
+
+    .promise_content {
+        width: auto;
+
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: $color_white;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin: 0 auto;
+            color: $color_white;
+        }
+    }
+}

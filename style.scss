@@ -38,13 +38,13 @@ $color-gray: #787878;
     right: 0;
     height: 7rem;
     z-index: 9999;
-    background-color: rgba(0, 0, 0, 0);;
+    background-color: rgba(0, 0, 0, 0);
     overflow-y: hidden;
 
     .logo_box {
         width: 120px;
 
-        img{
+        img {
             width: 120px;
             margin: 10px;
         }
@@ -115,7 +115,6 @@ $color-gray: #787878;
                     position: relative;
                     z-index: 50;
 
-
                     a {
                         font-size: 40px;
                         color: $color_white;
@@ -136,7 +135,6 @@ $color-gray: #787878;
     }
 }
 
-
 // 主要內容區
 .main_video {
     position: absolute;
@@ -155,5 +153,5 @@ $color-gray: #787878;
         object-fit: cover;
         transform: translate(-50%, -50%);
         z-index: -1;
-      }
-  }
+    }
+}

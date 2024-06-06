@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
     <link href="./style.css" rel="stylesheet" />
 </head>
+
 <body>
     <header class="header_load">
         <div class="logo_box">
@@ -48,11 +50,13 @@
 
     <section class="main_video">
         <video autoplay muted loop id="backgroundVideo">
-            <source src="./Quilt_promo.mp4" type="video/mp4">
+            <source id="videoSource" src="./video/Quilt_promo_one.mp4" type="video/mp4">
+            <source id="videoSource" src="./video/Quilt_promo_two.mp4" type="video/mp4">
         </video>
     </section>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="./main.js"></script>
 </body>
+
 </html>

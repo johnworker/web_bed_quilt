@@ -189,16 +189,26 @@ License URI: mit
   color: #ffffff;
 }
 
-.video_wrapper {
-  position: absolute;
-  top: 0;
-  left: 0;
+.comparisonSection {
+  position: relative;
+  padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
+}
+.comparisonSection .comparisonImage {
   width: 100%;
   height: 100%;
-  overflow: hidden;
-  opacity: 0;
-  transition: opacity 1s;
 }
-.video_wrapper:active {
-  opacity: 1;
+.comparisonSection .comparisonImage img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+.comparisonSection .afterImage {
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  transform: translate(100%, 0px);
+}
+.comparisonSection .afterImage img {
+  transform: translate(-100%, 0px);
 }/*# sourceMappingURL=style.css.map */

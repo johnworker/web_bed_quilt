@@ -71,3 +71,22 @@ gsap.utils.toArray(".comparisonSection").forEach((section) => {
       0
     );
 });
+
+// 示例：添加動畫效果
+document.addEventListener('DOMContentLoaded', function () {
+  const logo = document.querySelector('.block_intro .logo');
+  const options = {
+    threshold: 0.5
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  observer.observe(logo);
+});

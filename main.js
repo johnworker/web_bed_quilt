@@ -40,3 +40,31 @@ $(document).ready(function() {
   // 確保影片自動播放
   videos[currentVideoIndex].play();
 });
+
+// 卷軸移動換影片
+// 初始化 GSAP 和 ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+document.addEventListener('DOMContentLoaded', function() {
+    let videoWrappers = document.querySelectorAll('.video-wrapper');
+
+    videoWrappers.forEach((wrapper, index) => {
+        ScrollTrigger.create({
+            trigger: wrapper,
+            start: 'top center',
+            end: 'bottom center',
+            onEnter: () => switchVideo(index),
+            onEnterBack: () => switchVideo(index),
+        });
+    });
+
+    function switchVideo(index) {
+        videoWrappers.forEach((wrapper, i) => {
+            if (i === index) {
+                wrapper.classList.add('active');
+            } else {
+                wrapper.classList.remove('active');
+            }
+        });
+    }
+});

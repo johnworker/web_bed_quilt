@@ -187,4 +187,18 @@ License URI: mit
   max-width: 600px;
   margin: 0 auto;
   color: #ffffff;
+}
+
+.video_wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 1s;
+}
+.video_wrapper:active {
+  opacity: 1;
 }/*# sourceMappingURL=style.css.map */

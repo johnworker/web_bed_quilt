@@ -11,3 +11,5 @@
 |-- /video
     |-- Quilt_promo_one.mp4
     |-- Quilt_promo_two.mp4
+    |-- Quilt_promo_three.mp4
+    |-- Quilt_promo_four.mp4

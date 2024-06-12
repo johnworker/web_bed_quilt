@@ -21,6 +21,7 @@ $color_background: #ebebeb;
 $color_light_gray: #919191;
 $color_dark_gray: #383838;
 $color-gray: #787878;
+$color-dark_blue: #17222e;
 
 * {
     margin: 0;
@@ -300,6 +301,21 @@ $color-gray: #787878;
     }
 }
 
+.block_intro .logo.animate svg {
+    animation: blurAnimation 1s ease-in-out forwards;
+}
+
+@keyframes blurAnimation {
+    from {
+        filter: blur(10px);
+        opacity: 0;
+    }
+    to {
+        filter: blur(0);
+        opacity: 1;
+    }
+}
+
 //承諾區
 .commitment_section {
     background: url(./images/commitment_zone_background.jpg);
@@ -340,11 +356,103 @@ $color-gray: #787878;
     }
 
     .commitment_image {
-        width: 100%;
-        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
 
         img {
-            margin: 30px auto;
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+// 推薦品牌和推薦項目區域
+.recommendation_section {
+    padding: 50px 0;
+    background: $color-dark_blue;
+    color: white;
+    text-align: center;
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .recommendation_box {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .recommendation_item {
+            flex: 1;
+            max-width: 45%;
+            margin: 20px;
+            text-align: center;
+            background-color: #2e2e2e;
+            padding: 20px;
+            border-radius: 10px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+// 常見問題區
+.faq_section {
+    padding: 50px 0;
+    background: $color-dark_blue;
+    color: white;
+    text-align: center;
+
+    .faq_content {
+        max-width: 800px;
+        margin: 0 auto;
+        text-align: left;
+
+        h2 {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .faq_item {
+            margin-bottom: 20px;
+            background: #6a6a6a;
+            padding: 10px;
+            cursor: pointer;
+
+            &:active .faq_answer {
+                display: block;
+            }
+
+            h3 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+            .faq_answer {
+                display: none;
+                transition: all 0.3s ease;
+
+                p {
+                    font-size: 16px;
+                    line-height: 1.6;
+                }
+
+                ul {
+                    list-style-type: disc;
+                    padding-left: 20px;
+
+                    li {
+                        margin-bottom: 5px;
+                        font-size: 16px;
+                        line-height: 1.6;
+                    }
+                }
+            }
         }
     }
 }

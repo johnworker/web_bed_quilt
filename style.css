@@ -254,6 +254,20 @@ License URI: mit
   line-height: 1.6;
 }
 
+.block_intro .logo.animate svg {
+  animation: blurAnimation 1s ease-in-out forwards;
+}
+
+@keyframes blurAnimation {
+  from {
+    filter: blur(10px);
+    opacity: 0;
+  }
+  to {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
 .commitment_section {
   background: url(./images/commitment_zone_background.jpg);
   color: white;
@@ -288,9 +302,87 @@ License URI: mit
   font-size: 18px;
 }
 .commitment_section .commitment_image {
-  width: 100%;
-  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
 }
 .commitment_section .commitment_image img {
-  margin: 30px auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.recommendation_section {
+  padding: 50px 0;
+  background: #17222e;
+  color: white;
+  text-align: center;
+}
+.recommendation_section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.recommendation_section .recommendation_box {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.recommendation_section .recommendation_box .recommendation_item {
+  flex: 1;
+  max-width: 45%;
+  margin: 20px;
+  text-align: center;
+  background-color: #2e2e2e;
+  padding: 20px;
+  border-radius: 10px;
+}
+.recommendation_section .recommendation_box .recommendation_item img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.faq_section {
+  padding: 50px 0;
+  background: #17222e;
+  color: white;
+  text-align: center;
+}
+.faq_section .faq_content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+.faq_section .faq_content h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+.faq_section .faq_content .faq_item {
+  margin-bottom: 20px;
+  background: #6a6a6a;
+  padding: 10px;
+  cursor: pointer;
+}
+.faq_section .faq_content .faq_item:active .faq_answer {
+  display: block;
+}
+.faq_section .faq_content .faq_item h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.faq_section .faq_content .faq_item .faq_answer {
+  display: none;
+  transition: all 0.3s ease;
+}
+.faq_section .faq_content .faq_item .faq_answer p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+.faq_section .faq_content .faq_item .faq_answer ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+.faq_section .faq_content .faq_item .faq_answer ul li {
+  margin-bottom: 5px;
+  font-size: 16px;
+  line-height: 1.6;
 }/*# sourceMappingURL=style.css.map */

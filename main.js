@@ -90,3 +90,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
   observer.observe(logo);
 });
+
+// FAQ下拉開合
+$(document).ready(function () {
+  $('.faq_question').click(function () {
+    const faqItem = $(this).closest('.faq_item');
+    faqItem.toggleClass('active');
+    faqItem.siblings().removeClass('active').find('.faq_answer').slideUp();
+    faqItem.find('.faq_answer').slideToggle();
+  });
+});

@@ -235,15 +235,15 @@ License URI: mit
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  background: rgba(255, 255, 255, 0.8);
   border-radius: 10px;
 }
 .block_intro .block_inner .logo {
   margin-bottom: 20px;
 }
 .block_intro .block_inner .logo svg {
-  width: 100px;
-  height: 100px;
+  width: 345px;
+  height: 338px;
+  background-image: url(./images/mask_logo.svg);
 }
 .block_intro .block_inner .text {
   font-size: 24px;

@@ -8,6 +8,9 @@
 |-- main.js
 |-- /images
     |-- font_logo.png
+    |-- mask_logo.svg
+    |-- quality_description_bg.jpg
+    |-- sleeping_person.jpg
 |-- /video
     |-- Quilt_promo_one.mp4
     |-- Quilt_promo_two.mp4

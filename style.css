@@ -255,9 +255,15 @@ License URI: mit
 }
 
 .commitment_section {
-  background-color: #1a1a1a;
+  background: url(./images/commitment_zone_background.jpg);
   color: white;
   padding: 50px 0;
+}
+.commitment_section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-align: center;
 }
 .commitment_section .commitment_box {
   display: flex;
@@ -270,6 +276,8 @@ License URI: mit
   max-width: 180px;
   text-align: center;
   margin: 20px;
+  background: #17222e;
+  padding: 15px;
 }
 .commitment_section .commitment_box .commitment_item .commitment_item img {
   max-width: 100%;

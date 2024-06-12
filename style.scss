@@ -257,45 +257,76 @@ $color-gray: #787878;
     position: relative;
     text-align: center;
     padding: 60px 0;
-  
+
     .bg_img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('./images/quality_description_bg.jpg') no-repeat center center;
-      background-size: cover;
-      filter: blur(8px);
-      z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("./images/quality_description_bg.jpg") no-repeat center center;
+        background-size: cover;
+        filter: blur(8px);
+        z-index: -1;
     }
-  
+
     .block_inner {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 20px;
-      border-radius: 10px;
-  
-      .logo {
-        margin-bottom: 20px;
-  
-        svg {
-          width: 345px;
-          height: 338px;
-          background-image: url(./images/mask_logo.svg);
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
+        border-radius: 10px;
+
+        .logo {
+            margin-bottom: 20px;
+
+            svg {
+                width: 345px;
+                height: 338px;
+                background-image: url(./images/mask_logo.svg);
+            }
         }
-      }
-  
-      .text {
-        font-size: 24px;
-        margin-bottom: 10px;
-      }
-  
-      .notes {
-        font-size: 18px;
-        line-height: 1.6;
-      }
+
+        .text {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .notes {
+            font-size: 18px;
+            line-height: 1.6;
+        }
     }
-  }
+}
+
+//承諾區
+.commitment_section {
+    background-color: #1a1a1a;
+    color: white;
+    padding: 50px 0;
+
+    .commitment_box {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .commitment_item {
+            flex: 1;
+            max-width: 180px;
+            text-align: center;
+            margin: 20px;
+
+            .commitment_item img {
+                max-width: 100%;
+                height: auto;
+                margin-bottom: 10px;
+            }
+
+            .commitment_item p {
+                font-size: 18px;
+            }
+        }
+    }
+}

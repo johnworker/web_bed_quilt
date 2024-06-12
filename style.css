@@ -286,4 +286,11 @@ License URI: mit
 }
 .commitment_section .commitment_box .commitment_item .commitment_item p {
   font-size: 18px;
+}
+.commitment_section .commitment_image {
+  width: 100%;
+  margin: 0 auto;
+}
+.commitment_section .commitment_image img {
+  margin: 30px auto;
 }/*# sourceMappingURL=style.css.map */

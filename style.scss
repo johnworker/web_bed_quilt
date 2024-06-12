@@ -456,3 +456,41 @@ $color-dark_blue: #17222e;
         }
     }
 }
+
+// 輪播區
+.carousel_section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+
+    .carousel_container {
+        display: flex;
+        transition: transform 0.5s ease;
+
+        .carousel_item {
+            min-width: 100%;
+            box-sizing: border-box;
+        }
+    }
+
+    .carousel_prev,
+    .carousel_next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+    }
+
+    .carousel_prev {
+        left: 10px;
+    }
+
+    .carousel_next {
+        right: 10px;
+    }
+}

@@ -385,4 +385,36 @@ License URI: mit
   margin-bottom: 5px;
   font-size: 16px;
   line-height: 1.6;
+}
+
+.carousel_section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.carousel_section .carousel_container {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel_section .carousel_container .carousel_item {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+.carousel_section .carousel_prev,
+.carousel_section .carousel_next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.carousel_section .carousel_prev {
+  left: 10px;
+}
+.carousel_section .carousel_next {
+  right: 10px;
 }/*# sourceMappingURL=style.css.map */

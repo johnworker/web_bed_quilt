@@ -91,13 +91,12 @@ document.addEventListener('DOMContentLoaded', function () {
   observer.observe(logo);
 });
 
-// FAQ下拉開合
+// Q&A開合選單
 $(document).ready(function () {
-  $('.faq_question').click(function () {
-    const faqItem = $(this).closest('.faq_item');
-    faqItem.toggleClass('active');
-    faqItem.siblings().removeClass('active').find('.faq_answer').slideUp();
-    faqItem.find('.faq_answer').slideToggle();
+  // FAQ 切換
+  $('.QA_question').click(function () {
+      $(this).next('.QA_answer').slideToggle();
+      $(this).parent('.QA_item').siblings().find('.QA_answer').slideUp();
   });
 });
 
@@ -116,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 
   // 計算動畫持續時間
-  const animationDuration = 20; // 動畫持續時間（秒），根據需要調整
+  const animationDuration = 40; // 動畫持續時間（秒），根據需要調整
   moveContainer.style.animationDuration = `${animationDuration}s`;
 
   // 動態生成@keyframes，確保無縫循環

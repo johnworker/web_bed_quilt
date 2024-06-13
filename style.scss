@@ -403,53 +403,66 @@ $color-dark_blue: #17222e;
 }
 
 // 常見問題區
-.faq_section {
-    padding: 50px 0;
+#FQA {
+    overflow: hidden;
     background: $color-dark_blue;
-    color: white;
-    text-align: center;
 
-    .faq_content {
-        max-width: 800px;
-        margin: 0 auto;
-        text-align: left;
+    @media screen and (min-width: $mobile) {
+        height: 90vh;
+        width: 100%;
+        padding-top: 30px;
+    }
 
-        h2 {
-            font-size: 24px;
-            margin-bottom: 30px;
+    @media screen and (max-width: $mobile) {
+        height: 115vh;
+        width: 375px;
+    }
+
+    .QA_text_box {
+        height: auto;
+        margin: 30px 30px 50px 50px;
+
+        @media screen and (max-width: $mobile) {
+            word-wrap: break-word;
+            overflow-x: hidden;
         }
 
-        .faq_item {
-            margin-bottom: 20px;
-            background: #6a6a6a;
-            padding: 10px;
-            cursor: pointer;
+        .QA_title {
+            font-size: 44px;
+            font-weight: bold;
+            color: $color_white;
+        }
 
-            &:active .faq_answer {
-                display: block;
-            }
-
-            h3 {
-                font-size: 20px;
+        .QA_list {
+            margin-top: 50px;
+            .QA_item {
                 margin-bottom: 10px;
-            }
-            .faq_answer {
-                display: none;
-                transition: all 0.3s ease;
+                border: 0.2px solid #2e2e2e;
+                border-radius: 10px;
 
-                p {
-                    font-size: 16px;
-                    line-height: 1.6;
+                .QA_question {
+                    background-color: #2e2e2e;
+                    color: white;
+                    padding: 15px;
+                    cursor: pointer;
+                    border-radius: 5px;
                 }
 
-                ul {
-                    list-style-type: disc;
-                    padding-left: 20px;
+                .QA_answer {
+                    display: none;
+                    background-color: $color-dark_blue;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin-top: 5px;
 
-                    li {
-                        margin-bottom: 5px;
-                        font-size: 16px;
-                        line-height: 1.6;
+                    p {
+                        color: $color_white;
+                    }
+
+                    ol {
+                        li {
+                            color: $color_white;
+                        }
                     }
                 }
             }
@@ -466,7 +479,7 @@ $color-dark_blue: #17222e;
     .move_container {
         display: flex;
         width: max-content;
-        animation: moveAnimation 20s linear infinite;
+        animation: moveAnimation 40s linear infinite;
 
         .move_item {
             flex: none;
@@ -483,6 +496,41 @@ $color-dark_blue: #17222e;
             }
             100% {
                 transform: translateX(-50%);
+            }
+        }
+    }
+}
+
+// 頁尾區
+.site_footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    .footer_content {
+        max-width: 1200px;
+        margin: 0 auto;
+        p {
+            margin: 0;
+        }
+        .social_media {
+            margin-top: 10px;
+            a {
+                color: #fff;
+                text-decoration: none;
+                margin: 0 10px;
+                transition: 0.3s;
+                padding: 0 10px;
+
+                &:hover {
+                    filter: invert(30%) sepia(14%) saturate(2550%) hue-rotate(201deg) brightness(91%) contrast(90%);
+                }
+
+                img {
+                    width: 30px;
+                    vertical-align: -25px; //上下對齊
+                    color: $color_white;
+                }
             }
         }
     }

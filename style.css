@@ -394,12 +394,15 @@ License URI: mit
 }
 .move_section .move_container {
   display: flex;
-  width: 400%;
-  animation: moveAnimation 20s linear infinite;
+  width: 15990px;
+  animation: moveAnimation 10s linear infinite;
 }
 .move_section .move_container .move_item {
-  flex: 1 0 25%;
-  box-sizing: border-box;
+  flex: none;
+}
+.move_section .move_container .move_item img {
+  display: block;
+  width: 100%;
 }
 @keyframes moveAnimation {
   0% {

@@ -102,3 +102,18 @@ $(document).ready(function () {
 });
 
 // 影像循環區
+document.addEventListener('DOMContentLoaded', function () {
+  const moveContainer = document.querySelector('.move_container');
+  const moveItems = Array.from(document.querySelectorAll('.move_item'));
+  const totalItems = moveItems.length;
+
+  // 複製前幾個項目，並附加到容器末尾
+  moveItems.forEach(item => {
+    const clone = item.cloneNode(true);
+    moveContainer.appendChild(clone);
+  });
+
+  // 設定動畫持續時間與總長度
+  const animationDuration = 5 * totalItems; // 5秒 * 項目數
+  moveContainer.style.animationDuration = `${animationDuration}s`;
+});

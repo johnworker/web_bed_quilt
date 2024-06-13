@@ -465,7 +465,7 @@ $color-dark_blue: #17222e;
 
     .move_container {
         display: flex;
-        width: 15990px;
+        width: max-content;
         animation: moveAnimation 10s linear infinite;
 
         .move_item {
@@ -474,6 +474,10 @@ $color-dark_blue: #17222e;
             img {
                 display: block;
                 width: 100%;
+
+                &::before {
+                    background: $color-dark_blue;
+                }
             }
         }
 

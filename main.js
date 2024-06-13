@@ -105,15 +105,27 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', function () {
   const moveContainer = document.querySelector('.move_container');
   const moveItems = Array.from(document.querySelectorAll('.move_item'));
-  const totalItems = moveItems.length;
 
-  // 複製前幾個項目，並附加到容器末尾
+  // 複製所有項目並附加到容器末尾
   moveItems.forEach(item => {
     const clone = item.cloneNode(true);
     moveContainer.appendChild(clone);
   });
 
-  // 設定動畫持續時間與總長度
-  const animationDuration = 5 * totalItems; // 5秒 * 項目數
+  // 計算動畫持續時間
+  const totalItems = moveItems.length;
+  const animationDuration = 20; // 動畫持續時間，根據需要調整
   moveContainer.style.animationDuration = `${animationDuration}s`;
+
+  // 確保無縫循環
+  const keyframes = `
+      @keyframes moveLeft {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100% * ${totalItems}); }
+      }
+  `;
+  const styleSheet = document.createElement("style");
+  styleSheet.type = "text/css";
+  styleSheet.innerText = keyframes;
+  document.head.appendChild(styleSheet);
 });

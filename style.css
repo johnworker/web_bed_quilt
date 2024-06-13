@@ -394,7 +394,8 @@ License URI: mit
 }
 .move_section .move_container {
   display: flex;
-  width: 15990px;
+  width: -moz-max-content;
+  width: max-content;
   animation: moveAnimation 10s linear infinite;
 }
 .move_section .move_container .move_item {
@@ -403,6 +404,9 @@ License URI: mit
 .move_section .move_container .move_item img {
   display: block;
   width: 100%;
+}
+.move_section .move_container .move_item img::before {
+  background: #17222e;
 }
 @keyframes moveAnimation {
   0% {

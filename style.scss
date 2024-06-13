@@ -466,7 +466,7 @@ $color-dark_blue: #17222e;
     .move_container {
         display: flex;
         width: max-content;
-        animation: moveAnimation 10s linear infinite;
+        animation: moveAnimation 20s linear infinite;
 
         .move_item {
             flex: none;
@@ -474,10 +474,6 @@ $color-dark_blue: #17222e;
             img {
                 display: block;
                 width: 100%;
-
-                &::before {
-                    background: $color-dark_blue;
-                }
             }
         }
 
@@ -486,7 +482,7 @@ $color-dark_blue: #17222e;
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-50%);
             }
         }
     }

@@ -105,27 +105,36 @@ $(document).ready(function () {
 document.addEventListener('DOMContentLoaded', function () {
   const moveContainer = document.querySelector('.move_container');
   const moveItems = Array.from(document.querySelectorAll('.move_item'));
+  const containerWidth = moveContainer.clientWidth;
+  const itemWidth = moveItems[0].clientWidth;
+  const totalItems = moveItems.length;
 
-  // 複製所有項目並附加到容器末尾
+  // 複製所有項目並附加到容器末尾以實現無縫循環
   moveItems.forEach(item => {
     const clone = item.cloneNode(true);
     moveContainer.appendChild(clone);
   });
 
   // 計算動畫持續時間
-  const totalItems = moveItems.length;
-  const animationDuration = 20; // 動畫持續時間，根據需要調整
+  const animationDuration = 20; // 動畫持續時間（秒），根據需要調整
   moveContainer.style.animationDuration = `${animationDuration}s`;
 
-  // 確保無縫循環
+  // 動態生成@keyframes，確保無縫循環
   const keyframes = `
       @keyframes moveLeft {
           0% { transform: translateX(0); }
-          100% { transform: translateX(-100% * ${totalItems}); }
+          100% { transform: translateX(calc(-${itemWidth}px * ${totalItems})); }
       }
   `;
   const styleSheet = document.createElement("style");
   styleSheet.type = "text/css";
   styleSheet.innerText = keyframes;
   document.head.appendChild(styleSheet);
+
+  // 動畫結束時重置動畫以達到無縫循環
+  moveContainer.addEventListener('animationiteration', () => {
+    moveContainer.style.animation = 'none';
+    moveContainer.offsetHeight; /* 觸發重繪 */
+    moveContainer.style.animation = null;
+  });
 });

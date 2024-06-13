@@ -101,33 +101,4 @@ $(document).ready(function () {
   });
 });
 
-// 尾端輪播效果
-$(document).ready(function () {
-  const carouselContainer = $('.carousel_container');
-  const carouselItems = $('.carousel_item');
-  const totalItems = carouselItems.length;
-  let currentIndex = 0;
-
-  $('.carousel_next').click(function () {
-    if (currentIndex < totalItems - 1) {
-      currentIndex++;
-    } else {
-      currentIndex = 0;
-    }
-    updateCarousel();
-  });
-
-  $('.carousel_prev').click(function () {
-    if (currentIndex > 0) {
-      currentIndex--;
-    } else {
-      currentIndex = totalItems - 1;
-    }
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    const translateX = -currentIndex * 100;
-    carouselContainer.css('transform', `translateX(${translateX}%)`);
-  }
-});
+// 影像循環區

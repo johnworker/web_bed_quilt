@@ -42,7 +42,42 @@ $(document).ready(function () {
 });
 
 
-// 卷軸移動換圖
+// 效果影片區
+// 新增影片區塊滾動動畫
+// GSAP和ScrollTrigger初始化
+// 新增影片區塊滾動動畫
+document.addEventListener('DOMContentLoaded', function () {
+  const scrollVideos = gsap.utils.toArray('.scroll_video');
+  const totalSections = scrollVideos.length;
+
+  scrollVideos.forEach((video, i) => {
+    ScrollTrigger.create({
+      trigger: '.scroll_video_section',
+      start: () => (i * 100) + 'vh',
+      end: () => ((i + 1) * 100) + 'vh',
+      scrub: true,
+      onEnter: () => switchScrollVideo(i),
+      onEnterBack: () => switchScrollVideo(i),
+    });
+  });
+
+  function switchScrollVideo(index) {
+    scrollVideos.forEach((video, i) => {
+      if (i === index) {
+        video.classList.add('active');
+        video.classList.remove('inactive');
+        video.play();
+      } else {
+        video.classList.add('inactive');
+        video.classList.remove('active');
+        video.pause();
+        video.currentTime = 0;
+      }
+    });
+  }
+});
+
+// 宣傳圖片效果區(卷軸移動換圖效果)
 // 初始化 GSAP 和 ScrollTrigger
 gsap.utils.toArray(".comparisonSection").forEach((section) => {
   let tl = gsap.timeline({
@@ -95,8 +130,8 @@ document.addEventListener('DOMContentLoaded', function () {
 $(document).ready(function () {
   // FAQ 切換
   $('.QA_question').click(function () {
-      $(this).next('.QA_answer').slideToggle();
-      $(this).parent('.QA_item').siblings().find('.QA_answer').slideUp();
+    $(this).next('.QA_answer').slideToggle();
+    $(this).parent('.QA_item').siblings().find('.QA_answer').slideUp();
   });
 });
 

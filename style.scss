@@ -224,7 +224,41 @@ $color-dark_blue: #17222e;
     }
 }
 
-// 宣傳影片區
+// 效果影片區
+.scroll_video_section {
+    position: relative;
+    height: 200vh; // 讓影片區塊高度足夠進行切換
+    overflow: hidden;
+
+    .video_container {
+        position: sticky;
+        top: 0;
+        height: 100vh;
+    }
+
+    .scroll_video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+
+        &.active {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        &.inactive {
+            opacity: 0;
+            z-index: 0;
+        }
+    }
+}
+
+// 宣傳圖片效果區
 .comparisonSection {
     position: relative;
     padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */

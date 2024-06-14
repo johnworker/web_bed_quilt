@@ -227,32 +227,37 @@ $color-dark_blue: #17222e;
 // 效果影片區
 .scroll_video_section {
     position: relative;
-    height: 200vh; // 讓影片區塊高度足夠進行切換
+    height: 100vh; // 確保區域高度為100%
     overflow: hidden;
 
     .video_container {
-        position: sticky;
-        top: 0;
-        height: 100vh;
-    }
-
-    .scroll_video {
         position: absolute;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; // 確保影片保持比例填充整個區域
+        }
+    }
+
+    .scroll_video {
+        position: absolute;
+        width: 100%;
+        height: 100%;
         object-fit: cover;
-        opacity: 0;
-        transition: opacity 1s ease-in-out;
 
         &.active {
-            opacity: 1;
             z-index: 1;
         }
 
         &.inactive {
-            opacity: 0;
             z-index: 0;
         }
     }

@@ -44,8 +44,7 @@ $(document).ready(function () {
 
 // 效果影片區
 // 新增影片區塊滾動動畫
-// GSAP和ScrollTrigger初始化
-// 新增影片區塊滾動動畫
+// 影片切換邏輯
 document.addEventListener('DOMContentLoaded', function () {
   const scrollVideos = gsap.utils.toArray('.scroll_video');
   const totalSections = scrollVideos.length;

@@ -558,10 +558,11 @@ License URI: mit
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  height: 300px;
 }
 .feature_section .feature_content .feature_items .feature_item {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   margin: 10px;
@@ -571,7 +572,7 @@ License URI: mit
 }
 .feature_section .feature_content .feature_items .feature_item h3 {
   font-size: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin: 2.5rem;
 }
 .feature_section .feature_content .feature_items .feature_item p {
   font-size: 1rem;

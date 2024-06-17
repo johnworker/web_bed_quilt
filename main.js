@@ -41,10 +41,9 @@ $(document).ready(function () {
   videos[currentVideoIndex].play();
 });
 
-
 // 效果影片區
 // 新增影片區塊滾動動畫
-// 影片切換邏輯
+// 效果影片區
 document.addEventListener('DOMContentLoaded', function () {
   const scrollVideos = gsap.utils.toArray('.scroll_video');
   const totalSections = scrollVideos.length;

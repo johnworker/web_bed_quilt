@@ -915,9 +915,11 @@ $color-dark_blue: #17222e;
                     margin-bottom: 5px;
                 }
 
-                .product_price {
+                .product_price,
+                .product_description {
                     font-size: 1rem;
                     color: #666;
+                    margin-bottom: 5px;
                 }
             }
         }

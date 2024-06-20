@@ -787,7 +787,9 @@ License URI: mit
   font-size: 1.2rem;
   margin-bottom: 5px;
 }
-.product_section .product_wrapper .product_list .product_item .product_price {
+.product_section .product_wrapper .product_list .product_item .product_price,
+.product_section .product_wrapper .product_list .product_item .product_description {
   font-size: 1rem;
   color: #666;
+  margin-bottom: 5px;
 }/*# sourceMappingURL=style.css.map */

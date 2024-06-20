@@ -720,6 +720,7 @@ License URI: mit
   background-size: cover;
   padding: 100px 20px;
   text-align: center;
+  height: 100vh;
   color: #fff;
 }
 .brand_section .brand_wrapper {
@@ -749,4 +750,44 @@ License URI: mit
 }
 .brand_section .brand_wrapper .brand_button:hover {
   background-color: #e04a4f;
+}
+
+.product_section {
+  padding: 40px 0;
+  background-color: #f8f8f8;
+}
+.product_section .product_wrapper {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+.product_section .product_wrapper .section_title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.product_section .product_wrapper .product_list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.product_section .product_wrapper .product_list .product_item {
+  width: 23%;
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+.product_section .product_wrapper .product_list .product_item img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+.product_section .product_wrapper .product_list .product_item .product_name {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.product_section .product_wrapper .product_list .product_item .product_price {
+  font-size: 1rem;
+  color: #666;
 }/*# sourceMappingURL=style.css.map */

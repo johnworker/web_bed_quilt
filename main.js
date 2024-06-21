@@ -170,3 +170,40 @@ document.addEventListener('DOMContentLoaded', function () {
     moveContainer.style.animation = null;
   });
 });
+
+// 點擊縮圖切換大圖
+$(document).ready(function () {
+  $('.thumbnail').click(function () {
+    var newSrc = $(this).data('src');
+    $('#main_image').attr('src', newSrc);
+    $('.thumbnail').removeClass('active');
+    $(this).addClass('active');
+  });
+});
+
+// 初始化圖片滑動
+$(document).ready(function () {
+  // 點擊縮圖切換大圖
+  $('.thumbnail').click(function () {
+    var newSrc = $(this).data('src');
+    $('#mainImage').attr('src', newSrc);
+    $('.thumbnail').removeClass('active');
+    $(this).addClass('active');
+  });
+});
+
+// 圖片滑動效果
+$(document).ready(function () {
+  $('.sell_product_gallery').slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: false,
+    arrows: true,
+  });
+});
+
+// 新增至購物車按鈕功能
+document.querySelector('.add_to_cart').addEventListener('click', function () {
+  alert('商品已加入購物車');
+});

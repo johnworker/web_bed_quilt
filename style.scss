@@ -10,6 +10,7 @@ License: MIT
 License URI: mit
 */
 
+$max_big_desk: 1550px; //大型電腦尺寸
 $very_big_desk: 1330px; //大型電腦尺寸
 $big_desk: 1248px; //中型電腦尺寸
 $desk: 1024px; //小型電腦尺寸
@@ -177,8 +178,8 @@ $color-dark_blue: #17222e;
     margin: 695px 0 0 0;
     background: #16222e;
 
-    @media screen and (min-width: $big_desk) {
-        margin: 1035px 0 0 0;
+    @media screen and (max-width: $max_big_desk) {
+        margin: 695px 0 0 0;
     }
 
     .introduce_content {
@@ -365,6 +366,7 @@ $color-dark_blue: #17222e;
     background: url(./images/commitment_zone_background.jpg) no-repeat center center;
     color: white;
     padding: 50px 0;
+    background-color: #36424e;
 
     h2 {
         font-size: 24px;
@@ -904,6 +906,79 @@ $color-dark_blue: #17222e;
                     color: #666;
                     margin-bottom: 5px;
                 }
+            }
+        }
+    }
+}
+
+// 新增銷售產品區塊
+.sell_product_section {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    flex-direction: row;
+    align-items: center;
+    background: #16222e;
+    padding: 110px 100px;
+
+    .sell_pic {
+        width: 100%;
+    }
+
+    .sell_product_gallery {
+        width: 80%;
+    
+        .slick-slide img {
+            display: block;
+            margin: 0 auto;
+            width: 500px;
+        }
+    }
+    .sell_product_thumbnails {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    
+        .thumbnail {
+            width: 80px;
+            height: 80px;
+            margin: 0 5px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            &.active {
+                border: 2px solid #333;
+            }
+        }
+    }
+    
+    .sell_product_info {
+        margin-top: 20px;
+        text-align: center;
+
+        h2 {
+            color: $color_white;
+            padding-bottom: 30px;
+        }
+
+        p {
+            color: $color_white;
+            padding-bottom: 30px;
+        }
+    
+        .price {
+            color: red;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+    
+        .add_to_cart {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            &:hover {
+                background-color: #ff4a42;
             }
         }
     }

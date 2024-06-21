@@ -149,9 +149,9 @@ License URI: mit
   margin: 695px 0 0 0;
   background: #16222e;
 }
-@media screen and (min-width: 1248px) {
+@media screen and (max-width: 1550px) {
   .introduce_section {
-    margin: 1035px 0 0 0;
+    margin: 695px 0 0 0;
   }
 }
 .introduce_section .introduce_content {
@@ -312,6 +312,7 @@ License URI: mit
   background: url(./images/commitment_zone_background.jpg) no-repeat center center;
   color: white;
   padding: 50px 0;
+  background-color: #36424e;
 }
 .commitment_section h2 {
   font-size: 24px;
@@ -777,4 +778,67 @@ License URI: mit
   font-size: 1rem;
   color: #666;
   margin-bottom: 5px;
+}
+
+.sell_product_section {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  flex-direction: row;
+  align-items: center;
+  background: #16222e;
+  padding: 110px 100px;
+}
+.sell_product_section .sell_pic {
+  width: 100%;
+}
+.sell_product_section .sell_product_gallery {
+  width: 80%;
+}
+.sell_product_section .sell_product_gallery .slick-slide img {
+  display: block;
+  margin: 0 auto;
+  width: 500px;
+}
+.sell_product_section .sell_product_thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sell_product_section .sell_product_thumbnails .thumbnail {
+  width: 80px;
+  height: 80px;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+.sell_product_section .sell_product_thumbnails .thumbnail.active {
+  border: 2px solid #333;
+}
+.sell_product_section .sell_product_info {
+  margin-top: 20px;
+  text-align: center;
+}
+.sell_product_section .sell_product_info h2 {
+  color: #ffffff;
+  padding-bottom: 30px;
+}
+.sell_product_section .sell_product_info p {
+  color: #ffffff;
+  padding-bottom: 30px;
+}
+.sell_product_section .sell_product_info .price {
+  color: red;
+  font-size: 24px;
+  margin-top: 10px;
+}
+.sell_product_section .sell_product_info .add_to_cart {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+.sell_product_section .sell_product_info .add_to_cart:hover {
+  background-color: #ff4a42;
 }/*# sourceMappingURL=style.css.map */

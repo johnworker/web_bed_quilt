@@ -309,7 +309,7 @@ License URI: mit
   }
 }
 .commitment_section {
-  background: url(./images/commitment_zone_background.jpg);
+  background: url(./images/commitment_zone_background.jpg) no-repeat center center;
   color: white;
   padding: 50px 0;
 }
@@ -541,7 +541,7 @@ License URI: mit
   padding: 50px 0;
   text-align: center;
   height: 100vh;
-  background-image: url(./images/select_bg_img.jpg);
+  background-image: url(./images/select_bg_img.jpg) no-repeat center center;
 }
 .feature_section .feature_content {
   max-width: 1200px;
@@ -582,7 +582,7 @@ License URI: mit
 }
 
 .down_selection {
-  background-image: url(./images/point_bg_img.jpg);
+  background-image: url(./images/point_bg_img.jpg) no-repeat center center;
   padding: 50px 20px;
   text-align: center;
   height: 100vh;
@@ -676,7 +676,7 @@ License URI: mit
 .experience_section {
   padding: 50px 20px;
   text-align: center;
-  background-image: url(./images/experience_bg_img.jpg);
+  background-image: url(./images/experience_bg_img.jpg) no-repeat center center;
 }
 .experience_section .experience_wrapper {
   max-width: 800px;
@@ -716,40 +716,25 @@ License URI: mit
 }
 
 .brand_section {
-  background: url("./images/sleeping_person.jpg") no-repeat center center;
+  background: url("./images/brand_main_img.jpg") no-repeat center center;
   background-size: cover;
-  padding: 100px 20px;
-  text-align: center;
-  height: 100vh;
-  color: #fff;
+  padding: 100px 0;
 }
 .brand_section .brand_wrapper {
-  background: rgba(0, 0, 0, 0.6);
-  padding: 50px;
-  border-radius: 10px;
-  display: inline-block;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.3607843137);
+  width: 500px;
 }
 .brand_section .brand_wrapper .brand_title {
   font-size: 3rem;
-  font-weight: bold;
   margin-bottom: 20px;
 }
 .brand_section .brand_wrapper .brand_description {
   font-size: 1.5rem;
-  margin-bottom: 30px;
-}
-.brand_section .brand_wrapper .brand_button {
-  font-size: 1rem;
-  padding: 10px 20px;
-  background-color: #ff5a5f;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-.brand_section .brand_wrapper .brand_button:hover {
-  background-color: #e04a4f;
+  margin-bottom: 40px;
 }
 
 .product_section {

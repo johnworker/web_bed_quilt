@@ -926,7 +926,7 @@ $color-dark_blue: #17222e;
 
     .sell_product_gallery {
         width: 80%;
-    
+
         .slick-slide img {
             display: block;
             margin: 0 auto;
@@ -937,7 +937,7 @@ $color-dark_blue: #17222e;
         display: flex;
         justify-content: center;
         margin-top: 10px;
-    
+
         .thumbnail {
             width: 80px;
             height: 80px;
@@ -949,7 +949,7 @@ $color-dark_blue: #17222e;
             }
         }
     }
-    
+
     .sell_product_info {
         margin-top: 20px;
         text-align: center;
@@ -963,13 +963,13 @@ $color-dark_blue: #17222e;
             color: $color_white;
             padding-bottom: 30px;
         }
-    
+
         .price {
             color: red;
             font-size: 24px;
             margin-top: 10px;
         }
-    
+
         .add_to_cart {
             margin-top: 20px;
             padding: 10px 20px;
@@ -982,4 +982,49 @@ $color-dark_blue: #17222e;
             }
         }
     }
+}
+
+// 新增店鋪列表
+.shop_list_section {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.shop_list_background {
+    background-image: url("./images/your-background-image.jpg"); // 背景圖片路徑
+    background-size: cover;
+    background-position: center;
+    height: 100vh; // 根據需要調整高度
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shop_list_overlay {
+    background: rgba(0, 0, 0, 0.5); // 添加半透明背景
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.shop_list_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.shop_item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.shop_item h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.shop_item p {
+    margin: 5px 0 0;
+    font-size: 16px;
 }

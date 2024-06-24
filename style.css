@@ -196,7 +196,7 @@ License URI: mit
 
 .scroll_video_section {
   position: relative;
-  height: 100vh;
+  height: 130vh;
   overflow: hidden;
 }
 .scroll_video_section .video_container {

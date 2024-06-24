@@ -43,41 +43,37 @@ $(document).ready(function () {
 
 // 效果影片區
 // 新增影片區塊滾動動畫
-// 效果影片區
 document.addEventListener('DOMContentLoaded', function () {
-  const scrollVideos = gsap.utils.toArray('.scroll_video');
-  const totalSections = scrollVideos.length;
+  const scrollVideos = document.querySelectorAll('.scroll_video');
+  let currentVideoIndex = 0;
 
-  scrollVideos.forEach((video, i) => {
-    ScrollTrigger.create({
-      trigger: '.scroll_video_section',
-      start: () => (i * 100) + 'vh',
-      end: () => ((i + 1) * 100) + 'vh',
-      scrub: true,
-      onEnter: () => switchScrollVideo(i),
-      onEnterBack: () => switchScrollVideo(i),
-    });
-  });
+  function switchScrollVideo() {
+      const currentVideo = scrollVideos[currentVideoIndex];
+      const nextVideoIndex = (currentVideoIndex + 1) % scrollVideos.length;
+      const nextVideo = scrollVideos[nextVideoIndex];
 
-  function switchScrollVideo(index) {
-    scrollVideos.forEach((video, i) => {
-      if (i === index) {
-        video.classList.add('active');
-        video.classList.remove('inactive');
-        video.play();
-      } else {
-        video.classList.add('inactive');
-        video.classList.remove('active');
-        video.pause();
-        video.currentTime = 0;
-      }
-    });
+      // 切換顯示狀態
+      currentVideo.classList.remove('active');
+      currentVideo.classList.add('inactive');
+      nextVideo.classList.remove('inactive');
+      nextVideo.classList.add('active');
+
+      // 重設下一個影片並播放
+      nextVideo.currentTime = 0;
+      nextVideo.play();
+
+      // 更新當前影片索引
+      currentVideoIndex = nextVideoIndex;
   }
 
-  // 確保影片無限循環
+  // 設置影片的無限循環和播放結束時觸發切換
   scrollVideos.forEach(video => {
-    video.loop = true;
+      video.loop = true;
+      video.addEventListener('ended', switchScrollVideo);
   });
+
+  // 初始播放第一個影片
+  scrollVideos[currentVideoIndex].play();
 });
 
 // 宣傳圖片效果區(卷軸移動換圖效果)

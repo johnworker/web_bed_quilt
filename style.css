@@ -843,46 +843,65 @@ License URI: mit
   background-color: #ff4a42;
 }
 
-.shop_list_section {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.shop_list_background {
-  background-image: url("./images/your-background-image.jpg");
+.shop_list {
+  background: url("./images/shop_bg_img.jpg") no-repeat center center;
   background-size: cover;
-  background-position: center;
+  color: white;
+  text-align: left;
+  padding: 100px;
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
-
-.shop_list_overlay {
-  background: rgba(0, 0, 0, 0.5);
+.shop_list .shop_list_container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+  top: 300px;
+}
+.shop_list .shop_list_container h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+}
+.shop_list .shop_list_container .shop_list_items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.shop_list .shop_list_container .shop_list_items .shop_item {
+  margin: 10px 0;
   padding: 20px;
   border-radius: 10px;
+  font-size: 1.5em;
 }
 
-.shop_list_container {
+.area_selection {
+  padding: 50px 0;
+  background-color: #1b1b1b;
+  color: #fff;
+  text-align: center;
+}
+.area_selection .area_group {
+  margin-bottom: 30px;
+}
+.area_selection .area_group h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.area_selection .area_group .area_items {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
-
-.shop_item {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  border-radius: 5px;
+.area_selection .area_group .area_items .area_item {
+  width: 150px;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #242424;
+  border: 1px solid #333;
+  transition: background-color 0.3s;
+  cursor: pointer;
 }
-
-.shop_item h2 {
-  margin: 0;
-  font-size: 24px;
-}
-
-.shop_item p {
-  margin: 5px 0 0;
-  font-size: 16px;
+.area_selection .area_group .area_items .area_item:hover {
+  background-color: #333;
 }/*# sourceMappingURL=style.css.map */

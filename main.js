@@ -73,6 +73,11 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   }
+
+  // 確保影片無限循環
+  scrollVideos.forEach(video => {
+    video.loop = true;
+  });
 });
 
 // 宣傳圖片效果區(卷軸移動換圖效果)

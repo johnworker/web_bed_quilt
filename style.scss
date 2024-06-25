@@ -1087,6 +1087,10 @@ $color-dark_blue: #17222e;
     padding: 100px;
     height: 100vh;
 
+    @media screen and (max-width: $mobile) {
+        padding: 50px;
+    }
+
     .shop_list_container {
         max-width: 1200px;
         margin: 0 auto;

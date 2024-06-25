@@ -254,10 +254,6 @@ $color-dark_blue: #17222e;
     height: 130vh; // 確保區域高度為100%
     overflow: hidden;
 
-    @media screen and (max-width: $mobile) {
-        height: 100vh;
-    }
-
     .video_container {
         position: absolute;
         top: 0;
@@ -413,6 +409,10 @@ $color-dark_blue: #17222e;
         align-items: center;
         flex-wrap: wrap;
 
+        @media screen and (max-width: $mobile) {
+            flex-direction: column;
+        }
+
         .commitment_item {
             flex: 1;
             max-width: 180px;
@@ -471,6 +471,10 @@ $color-dark_blue: #17222e;
             padding: 20px;
             border-radius: 10px;
 
+            @media screen and (max-width: $mobile) {
+                max-width: 70%;
+            }    
+
             img {
                 max-width: 100%;
                 height: auto;
@@ -492,7 +496,7 @@ $color-dark_blue: #17222e;
     }
 
     @media screen and (max-width: $mobile) {
-        height: 115vh;
+        height: 100vh;
         width: 375px;
     }
 

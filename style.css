@@ -221,11 +221,6 @@ License URI: mit
   height: 130vh;
   overflow: hidden;
 }
-@media screen and (max-width: 767px) {
-  .scroll_video_section {
-    height: 100vh;
-  }
-}
 .scroll_video_section .video_container {
   position: absolute;
   top: 0;
@@ -365,6 +360,11 @@ License URI: mit
   align-items: center;
   flex-wrap: wrap;
 }
+@media screen and (max-width: 767px) {
+  .commitment_section .commitment_box {
+    flex-direction: column;
+  }
+}
 .commitment_section .commitment_box .commitment_item {
   flex: 1;
   max-width: 180px;
@@ -415,6 +415,11 @@ License URI: mit
   padding: 20px;
   border-radius: 10px;
 }
+@media screen and (max-width: 767px) {
+  .recommendation_section .recommendation_box .recommendation_item {
+    max-width: 70%;
+  }
+}
 .recommendation_section .recommendation_box .recommendation_item img {
   max-width: 100%;
   height: auto;
@@ -434,7 +439,7 @@ License URI: mit
 }
 @media screen and (max-width: 767px) {
   #FQA {
-    height: 115vh;
+    height: 100vh;
     width: 375px;
   }
 }

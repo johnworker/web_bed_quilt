@@ -727,12 +727,22 @@ License URI: mit
 .fabric_selection .fabric_wrapper .fabric_images .fabric_image .soft {
   margin: 16px 0 0;
 }
+@media screen and (max-width: 767px) {
+  .fabric_selection .fabric_wrapper .fabric_images .fabric_image .soft {
+    margin: 12px 0 0;
+  }
+}
 .fabric_selection .fabric_wrapper .fabric_images .fabric_image img {
   width: 100%;
   height: 140px;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 767px) {
+  .fabric_selection .fabric_wrapper .fabric_images .fabric_image img {
+    margin-bottom: 5px;
+  }
 }
 .fabric_selection .fabric_wrapper .fabric_images .fabric_image .fabric_p_one {
   padding: 7px 0 0;
@@ -753,6 +763,11 @@ License URI: mit
   background: rgba(255, 255, 255, 0);
   padding: 30px;
   border-radius: 10px;
+}
+@media screen and (max-width: 767px) {
+  .experience_section .experience_wrapper {
+    padding: 20px;
+  }
 }
 .experience_section .experience_wrapper .experience_title {
   font-size: 2rem;

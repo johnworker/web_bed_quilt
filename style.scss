@@ -637,6 +637,12 @@ $color-dark_blue: #17222e;
             width: 100vw;
             height: auto;
             filter: brightness(0.5);
+
+            @media screen and (max-width: $mobile) {
+                height: 100vh;
+                object-fit: cover;
+            }
+    
         }
 
         .select_text {
@@ -667,6 +673,10 @@ $color-dark_blue: #17222e;
     height: 100vh;
     background: url(./images/select_bg_img.jpg) no-repeat center center;
 
+    @media screen and (max-width: $mobile) {
+        height: 100%;
+    }
+
     .feature_content {
         max-width: 1200px;
         margin: 0 auto;
@@ -688,6 +698,10 @@ $color-dark_blue: #17222e;
             justify-content: center;
             margin-top: 100px;
 
+            @media screen and (max-width: $mobile) {
+                height: 100%;
+            }
+
             .feature_item {
                 background-color: rgb(201 201 201 / 10%);
                 border-radius: 50%;
@@ -698,6 +712,12 @@ $color-dark_blue: #17222e;
                 min-width: 280px;
                 max-width: 300px;
                 margin-inline: 0 -20px;
+
+                @media screen and (max-width: $mobile) {
+                    padding: 50px;
+                    margin-inline: 0;
+                    margin: -10px;
+                }            
 
                 h3 {
                     font-size: 1.5rem;

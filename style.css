@@ -565,6 +565,13 @@ License URI: mit
   height: auto;
   filter: brightness(0.5);
 }
+@media screen and (max-width: 767px) {
+  .select_section .select_content img {
+    height: 100vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
 .select_section .select_content .select_text {
   position: absolute;
   top: 50%;
@@ -588,6 +595,11 @@ License URI: mit
   height: 100vh;
   background: url(./images/select_bg_img.jpg) no-repeat center center;
 }
+@media screen and (max-width: 767px) {
+  .feature_section {
+    height: 100%;
+  }
+}
 .feature_section .feature_content {
   max-width: 1200px;
   margin: 0 auto;
@@ -607,6 +619,11 @@ License URI: mit
   justify-content: center;
   margin-top: 100px;
 }
+@media screen and (max-width: 767px) {
+  .feature_section .feature_content .feature_items {
+    height: 100%;
+  }
+}
 .feature_section .feature_content .feature_items .feature_item {
   background-color: rgba(201, 201, 201, 0.1);
   border-radius: 50%;
@@ -617,6 +634,13 @@ License URI: mit
   min-width: 280px;
   max-width: 300px;
   margin-inline: 0 -20px;
+}
+@media screen and (max-width: 767px) {
+  .feature_section .feature_content .feature_items .feature_item {
+    padding: 50px;
+    margin-inline: 0;
+    margin: -10px;
+  }
 }
 .feature_section .feature_content .feature_items .feature_item h3 {
   font-size: 1.5rem;

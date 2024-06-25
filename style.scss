@@ -988,11 +988,18 @@ $color-dark_blue: #17222e;
 // 新增銷售產品區塊
 .sell_product_section {
     display: grid;
-    grid-template-columns: 80% 20%;
-    flex-direction: row;
     align-items: center;
     background: #16222e;
     padding: 110px 100px;
+
+    @media screen and (min-width: $mobile) {
+        grid-template-columns: 80% 20%;
+    }
+
+    @media screen and (max-width: $mobile) {
+        grid-template-rows: 80% 20%;
+        padding: 20px;
+    }
 
     .sell_pic {
         width: 100%;
@@ -1001,10 +1008,19 @@ $color-dark_blue: #17222e;
     .sell_product_gallery {
         width: 80%;
 
+        @media screen and (max-width: $mobile) {
+            width: 100%;
+        }    
+
         .slick-slide img {
             display: block;
             margin: 0 auto;
             width: 500px;
+
+            @media screen and (max-width: $mobile) {
+                width: 100%;
+            }    
+    
         }
     }
     .sell_product_thumbnails {

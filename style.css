@@ -875,11 +875,20 @@ License URI: mit
 
 .sell_product_section {
   display: grid;
-  grid-template-columns: 80% 20%;
-  flex-direction: row;
   align-items: center;
   background: #16222e;
   padding: 110px 100px;
+}
+@media screen and (min-width: 767px) {
+  .sell_product_section {
+    grid-template-columns: 80% 20%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sell_product_section {
+    grid-template-rows: 80% 20%;
+    padding: 20px;
+  }
 }
 .sell_product_section .sell_pic {
   width: 100%;
@@ -887,10 +896,20 @@ License URI: mit
 .sell_product_section .sell_product_gallery {
   width: 80%;
 }
+@media screen and (max-width: 767px) {
+  .sell_product_section .sell_product_gallery {
+    width: 100%;
+  }
+}
 .sell_product_section .sell_product_gallery .slick-slide img {
   display: block;
   margin: 0 auto;
   width: 500px;
+}
+@media screen and (max-width: 767px) {
+  .sell_product_section .sell_product_gallery .slick-slide img {
+    width: 100%;
+  }
 }
 .sell_product_section .sell_product_thumbnails {
   display: flex;

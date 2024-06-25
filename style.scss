@@ -737,6 +737,10 @@ $color-dark_blue: #17222e;
     text-align: center;
     height: 100vh;
 
+    @media screen and (max-width: $mobile) {
+        height: 100%;
+    }
+
     .selection_wrapper {
         max-width: 800px;
         margin: 0 auto;

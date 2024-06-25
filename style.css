@@ -656,6 +656,11 @@ License URI: mit
   text-align: center;
   height: 100vh;
 }
+@media screen and (max-width: 767px) {
+  .down_selection {
+    height: 100%;
+  }
+}
 .down_selection .selection_wrapper {
   max-width: 800px;
   margin: 0 auto;

@@ -254,6 +254,10 @@ $color-dark_blue: #17222e;
     height: 130vh; // 確保區域高度為100%
     overflow: hidden;
 
+    @media screen and (max-width: $mobile) {
+        height: 100vh;
+    }
+
     .video_container {
         position: absolute;
         top: 0;
@@ -292,6 +296,11 @@ $color-dark_blue: #17222e;
     position: relative;
     padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
 
+    @media screen and (max-width: $mobile) {
+        height: 100vh;
+        width: 100vw;
+    }
+
     .comparisonImage {
         width: 100%;
         height: 100%;
@@ -301,6 +310,11 @@ $color-dark_blue: #17222e;
             height: 100%;
             position: absolute;
             top: 0;
+
+            @media screen and (max-width: $mobile) {
+                object-fit: cover;
+            }
+        
         }
     }
 

@@ -221,6 +221,11 @@ License URI: mit
   height: 130vh;
   overflow: hidden;
 }
+@media screen and (max-width: 767px) {
+  .scroll_video_section {
+    height: 100vh;
+  }
+}
 .scroll_video_section .video_container {
   position: absolute;
   top: 0;
@@ -255,6 +260,12 @@ License URI: mit
   position: relative;
   padding-bottom: 56.25%; /* to maintain aspect ratio (responsive!) */
 }
+@media screen and (max-width: 767px) {
+  .comparisonSection {
+    height: 100vh;
+    width: 100vw;
+  }
+}
 .comparisonSection .comparisonImage {
   width: 100%;
   height: 100%;
@@ -264,6 +275,12 @@ License URI: mit
   height: 100%;
   position: absolute;
   top: 0;
+}
+@media screen and (max-width: 767px) {
+  .comparisonSection .comparisonImage img {
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
 }
 .comparisonSection .afterImage {
   position: absolute;

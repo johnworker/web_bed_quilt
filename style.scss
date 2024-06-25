@@ -310,7 +310,6 @@ $color-dark_blue: #17222e;
             @media screen and (max-width: $mobile) {
                 object-fit: cover;
             }
-        
         }
     }
 
@@ -473,7 +472,7 @@ $color-dark_blue: #17222e;
 
             @media screen and (max-width: $mobile) {
                 max-width: 70%;
-            }    
+            }
 
             img {
                 max-width: 100%;
@@ -642,7 +641,6 @@ $color-dark_blue: #17222e;
                 height: 100vh;
                 object-fit: cover;
             }
-    
         }
 
         .select_text {
@@ -717,7 +715,7 @@ $color-dark_blue: #17222e;
                     padding: 50px;
                     margin-inline: 0;
                     margin: -10px;
-                }            
+                }
 
                 h3 {
                     font-size: 1.5rem;
@@ -823,8 +821,7 @@ $color-dark_blue: #17222e;
 
                     @media screen and (max-width: $mobile) {
                         margin: 12px 0 0;
-                    }            
-    
+                    }
                 }
 
                 img {
@@ -835,7 +832,7 @@ $color-dark_blue: #17222e;
 
                     @media screen and (max-width: $mobile) {
                         margin-bottom: 5px;
-                    }            
+                    }
                 }
 
                 .fabric_p_one {
@@ -863,7 +860,7 @@ $color-dark_blue: #17222e;
         background: rgba(255, 255, 255, 0);
         padding: 30px;
         border-radius: 10px;
-        
+
         @media screen and (max-width: $mobile) {
             padding: 20px;
         }
@@ -917,6 +914,11 @@ $color-dark_blue: #17222e;
         background: #ffffff5c;
         width: 500px;
 
+        @media screen and (max-width: $mobile) {
+            width: 375px;
+            margin: 80px 0 0 0;
+        }
+
         .brand_title {
             font-size: 3rem;
             margin-bottom: 20px;
@@ -956,6 +958,10 @@ $color-dark_blue: #17222e;
                 margin-bottom: 20px;
                 box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
                 text-align: center;
+
+                @media screen and (max-width: $mobile) {
+                    width: 100%;
+                }
 
                 img {
                     width: 100%;

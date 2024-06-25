@@ -811,6 +811,12 @@ License URI: mit
   background: rgba(255, 255, 255, 0.3607843137);
   width: 500px;
 }
+@media screen and (max-width: 767px) {
+  .brand_section .brand_wrapper {
+    width: 375px;
+    margin: 80px 0 0 0;
+  }
+}
 .brand_section .brand_wrapper .brand_title {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -845,6 +851,11 @@ License URI: mit
   margin-bottom: 20px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .product_section .product_wrapper .product_list .product_item {
+    width: 100%;
+  }
 }
 .product_section .product_wrapper .product_list .product_item img {
   width: 100%;

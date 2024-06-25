@@ -665,7 +665,7 @@ $color-dark_blue: #17222e;
     padding: 50px 0;
     text-align: center;
     height: 100vh;
-    background-image: url(./images/select_bg_img.jpg) no-repeat center center;
+    background: url(./images/select_bg_img.jpg) no-repeat center center;
 
     .feature_content {
         max-width: 1200px;
@@ -714,7 +714,7 @@ $color-dark_blue: #17222e;
 
 // 新增的羽絨挑選區域
 .down_selection {
-    background-image: url(./images/point_bg_img.jpg) no-repeat center center;
+    background: url(./images/point_bg_img.jpg) no-repeat center center;
     padding: 50px 20px;
     text-align: center;
     height: 100vh;
@@ -834,7 +834,6 @@ $color-dark_blue: #17222e;
         background: rgba(255, 255, 255, 0);
         padding: 30px;
         border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
         .experience_title {
             font-size: 2rem;

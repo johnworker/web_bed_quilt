@@ -182,8 +182,8 @@ $color-dark_blue: #17222e;
     margin: 695px 0 0 0;
     background: #16222e;
 
-    @media screen and (max-width: $max_big_desk) {
-        margin: 725px 0 0 0;
+    @media screen and (min-width: $very_big_desk) {
+        margin: 1036px 0 0 0;
     }
 
     @media screen and (max-width: $mobile) {

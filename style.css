@@ -154,9 +154,9 @@ License URI: mit
   margin: 695px 0 0 0;
   background: #16222e;
 }
-@media screen and (max-width: 1550px) {
+@media screen and (min-width: 1330px) {
   .introduce_section {
-    margin: 725px 0 0 0;
+    margin: 1036px 0 0 0;
   }
 }
 @media screen and (max-width: 767px) {

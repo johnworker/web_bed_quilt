@@ -139,11 +139,11 @@ $color-dark_blue: #17222e;
 
 // 影片內容區
 .main_video {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
 
     @media screen and (max-width: $mobile) {
@@ -179,15 +179,15 @@ $color-dark_blue: #17222e;
     justify-content: space-between;
     padding: 50px;
     height: 60vh;
-    margin: 695px 0 0 0;
+    // margin: 695px 0 0 0;
     background: #16222e;
 
     @media screen and (min-width: $very_big_desk) {
-        margin: 1036px 0 0 0;
+        // margin: 1036px 0 0 0;
     }
 
     @media screen and (max-width: $mobile) {
-        margin: 530px 0 0 0;
+        // margin: 530px 0 0 0;
         height: 115vh;
         flex-direction: column;
     }
